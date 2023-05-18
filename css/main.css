@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+    --BORDER-RADIUS: 15px; 
+}
+
+/* || GENERAL */
+
+body {
+    background-color: hsl(219, 39%, 84%);
+}
+
+.main {
+    margin: 30px auto 0;
+    border-radius: var(--BORDER-RADIUS);
+    max-width: 355px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.section {
+        /* with no borders the section & main margins become the same so thats why this is an inline-block so that the margins for the main and the section are actually put in it's called "Margin Collapsing" */
+    display: inline-block;
+    margin: 20px 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+        /* keeps the original aspect ratio of image */
+    height: auto;
+    border-radius: var(--BORDER-RADIUS);
+}
+
+h1,
+p {
+        /* Margin Collapsing happens here also, the bottom margin of the h1 tag collapses with the top margin of the p tag, but it looks neater so there is no reason HERE to change it */
+    margin: 20px 15px;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
